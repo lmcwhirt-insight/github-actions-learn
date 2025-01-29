@@ -19,6 +19,9 @@ jobs:
   build-job:
     name: Build web API
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./src/GitHubActionsWebApi
     strategy:
       matrix:
         dotnet-version: [ '7.0.x' ]
@@ -33,13 +36,10 @@ jobs:
           NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - name: Install dependencies
         run: dotnet restore
-        working-directory: src/GitHubActionsWebApi
       - name: Build
         run: dotnet build --configuration Release --no-restore
-        working-directory: src/GitHubActionsWebApi
       - name: Test with the dotnet CLI
         run: dotnet test --no-restore --results-directory "TestResults-${{ matrix.dotnet-version }}"
-        working-directory: src/GitHubActionsWebApi
       - name: Upload dotnet test results
         uses: actions/upload-artifact@v4
         with:
@@ -51,4 +51,3 @@ jobs:
         run: dotnet pack --configuration Release --no-restore 
       - name: Publish the package to GPR
         run: dotnet nuget push ./bin/Release/*.nupkg
-        working-directory: src/GitHubActionsWebApi
