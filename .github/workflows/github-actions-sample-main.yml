@@ -54,4 +54,6 @@ jobs:
         run: dotnet pack --configuration Release --no-restore 
       - name: Publish the package to GPR
         run: dotnet nuget push ./bin/Release/*.nupkg
+        env:
+          NUGET_AUTH_TOKEN: ${{secrets.PAT_GITHUB_TOKEN}}
         
