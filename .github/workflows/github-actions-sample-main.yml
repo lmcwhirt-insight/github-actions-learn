@@ -8,9 +8,11 @@ jobs:
     name: Lint code
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Install modules
-        run: yarn
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-      - name: Run ESLint
-        run: eslint . --ext .js,.jsx,.ts,.tsx
+      - name: Run linter
+        uses: github/super-linter@v4
+        env: 
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
