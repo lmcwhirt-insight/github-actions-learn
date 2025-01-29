@@ -50,4 +50,5 @@ jobs:
       - name: Dotnet ackage
         run: dotnet pack --configuration Release --no-restore 
       - name: Publish the package to GPR
-        run: dotnet nuget push **/*.nupkg
+        run: dotnet nuget push ./bin/Release/*.nupkg
+        
