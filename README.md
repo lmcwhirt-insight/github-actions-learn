@@ -1,2 +1,2 @@
 # github-actions-learn
-A repo to learn and test GH Actions
+A repository to learn and test GH Actions
