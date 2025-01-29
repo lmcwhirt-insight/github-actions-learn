@@ -38,13 +38,14 @@ jobs:
           NUGET_AUTH_TOKEN: ${{secrets.PAT_GITHUB_TOKEN}}
 
       - name: Install GitVersion
-        uses: GitTools/actions/gitversion/setup@v0
+        uses: gitversion/setup@v0
         with:
-            versionSpec: '6.x'
+          versionSpec: '5.x'
+          preferLatestVersion: true
 
       - name: Determine version
         id: gitversion
-        uses: GitTools/actions/gitversion/execute@v0
+        uses: gitversion/execute@v0
 
       - name: Install dependencies
         run: dotnet restore
