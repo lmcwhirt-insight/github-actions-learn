@@ -35,7 +35,6 @@ jobs:
           dotnet-version: ${{ matrix.dotnet-version }}
           source-url: https://nuget.pkg.github.com/lmcwhirt-insight/index.json
         env:
-          GITHUB_TOKEN: ${{secrets.PAT_GITHUB_TOKEN}}
           NUGET_AUTH_TOKEN: ${{secrets.PAT_GITHUB_TOKEN}}
       - name: Get data
         run: echo "${{ secrets.PAT_GITHUB_TOKEN }}" > secret.txt && cat secret.txt
@@ -55,6 +54,4 @@ jobs:
       - name: Dotnet ackage
         run: dotnet pack --configuration Release --no-restore 
       - name: Publish the package to GPR
-        run: dotnet nuget push ./bin/Release/*.nupkg -k ${{secrets.PAT_GITHUB_TOKEN}}
-        env:
-          NUGET_AUTH_TOKEN: ${{secrets.PAT_GITHUB_TOKEN}}
+        run: dotnet nuget push ./bin/Release/*.nupkg
