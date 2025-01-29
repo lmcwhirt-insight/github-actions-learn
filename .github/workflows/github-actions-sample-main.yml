@@ -33,6 +33,7 @@ jobs:
           dotnet-version: ${{ matrix.dotnet-version }}
           source-url: https://nuget.pkg.github.com/lmcwhirt-insight/index.json
         env:
+          GITHUB_TOKEN: ${{secrets.PAT_GITHUB_TOKEN}}
           NUGET_AUTH_TOKEN: ${{secrets.PAT_GITHUB_TOKEN}}
       - name: Get data
         run: echo "${{ secrets.PAT_GITHUB_TOKEN }}" > secret.txt && cat secret.txt
