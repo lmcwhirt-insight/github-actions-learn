@@ -51,6 +51,9 @@ jobs:
         id: gitversion
         uses: GitTools/actions/gitversion/execute@v0
 
+      - name: Log gitversion output
+        run: echo "gitversion.output:c ${{ steps.gitversion.outputs }}"
+
       - name: Install dependencies
         run: dotnet restore
 
