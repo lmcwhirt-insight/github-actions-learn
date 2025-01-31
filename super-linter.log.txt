@@ -1,0 +1,559 @@
+2025-01-29 17:32:23 [INFO]   --------------------------------------------------------------------------------
+
+                              /@@#///////@@/(@//@%/(@.@(       @@
+                          @@//////////////////////////////#*  @@@
+                        @////@//(///////////@@@@@///@//@/@**//@@(
+                      @///////@///////////////@@@@    (           @,
+                     @/(&/@////////////////////                     @
+                    @////////////////////////@@                      @
+                  @%////////(//////////%/////&@            @@       *,@           ______________
+             @@@@@/@/#/////(&//////////////////                       .@         /              \
+        *@@@@@.    .%///(//@//////////////////&.   .@@,                 @%      / Don't mind me  \
+      @@%           .&@&&/@.@//&/////(//////////    @@@@@@@@@         .. &@    / I'm just looking \
+    @@%               @@@@@   @&/////////////////#   @/       V  @@/ ,@@@ @   <  for some trash... |
+@@@%                   @@@@        .%@@@@//////#@ @   @@         @     .,.     \__________________/
+                                          @@@/@(  (@@@@% @/\      %
+                                           @@@@(    .     .@@/\   #
+                                             @                  %@%
+
+--------------------------------------------------------------------------------
+2025-01-29 17:32:23 [INFO]   ---------------------------------------------
+2025-01-29 17:32:23 [INFO]   --- GitHub Actions Multi Language Linter ----
+2025-01-29 17:32:23 [INFO]    - Image Creation Date: 2025-01-20T14:40:19Z
+2025-01-29 17:32:23 [INFO]    - Image Revision: 4c666df3c99f1326c749e2f54a56b7a42c166dec
+2025-01-29 17:32:23 [INFO]    - Image Version: 4c666df3c99f1326c749e2f54a56b7a42c166dec
+2025-01-29 17:32:23 [INFO]   ---------------------------------------------
+2025-01-29 17:32:23 [INFO]   ---------------------------------------------
+2025-01-29 17:32:23 [INFO]   The Super-Linter source code can be found at:
+2025-01-29 17:32:23 [INFO]    - https://github.com/super-linter/super-linter
+2025-01-29 17:32:23 [INFO]   ---------------------------------------------
+2025-01-29 17:32:23 [INFO]   - Validating all files in code base...
+2025-01-29 17:32:23 [INFO]   This version of Super-linter includes the following tools:
+[ANSIBLE] ansible-lint: 24.10.0
+[ARM] arm-ttk: 0.25
+[BASH] shellcheck: 0.10.0
+[BASH_EXEC] bash-exec: Version command not supported
+[CHECKOV] checkov: 3.2.295
+[CLANG_FORMAT] clang-format: 17.0.6
+[CLOJURE] clj-kondo: v2024.11.14
+[CLOUDFORMATION] cfn-lint: 1.19.0
+[COFFEESCRIPT] coffeelint: 5.2.11
+[CPP] cpplint: 2.0.0
+[CSHARP] dotnet: 9.0.100
+[CSS] stylelint: 16.10.0
+[CSS_PRETTIER] prettier: 3.4.1
+[DART] dart: 3.5.4
+[DOCKERFILE_HADOLINT] hadolint: 2.12.0
+[DOTNET_SLN_FORMAT_ANALYZERS] dotnet: 9.0.100
+[DOTNET_SLN_FORMAT_STYLE] dotnet: 9.0.100
+[DOTNET_SLN_FORMAT_WHITESPACE] dotnet: 9.0.100
+[EDITORCONFIG] editorconfig-checker: v3.0.3
+[ENV] dotenv-linter: 3.3.0
+[GHERKIN] gherkin-lint: Version command not supported
+[GITHUB_ACTIONS] actionlint: 1.7.4
+[GITLEAKS] gitleaks: v8.21.2
+[GIT_COMMITLINT] commitlint: @commitlint/cli@19.5.0
+[GIT_MERGE_CONFLICT_MARKERS] git-merge-conflict-markers: 1.0.0
+[GOOGLE_JAVA_FORMAT] google-java-format: 1.24.0
+[GO] golangci-lint: 1.62.0
+[GO_MODULES] golangci-lint: 1.62.0
+[GO_RELEASER] goreleaser: 2.4.8
+[GRAPHQL_PRETTIER] prettier: 3.4.1
+[GROOVY] npm-groovy-lint: 15.0.0
+[HTML] htmlhint: 1.1.4
+[HTML_PRETTIER] prettier: 3.4.1
+[JAVASCRIPT_ES] eslint: v8.57.1
+[JAVASCRIPT_PRETTIER] prettier: 3.4.1
+[JAVASCRIPT_STANDARD] standard: 17.1.2
+[JAVA] checkstyle: 10.20.1
+[JSCPD] jscpd: 4.0.5
+[JSONC] eslint: v8.57.1
+[JSONC_PRETTIER] prettier: 3.4.1
+[JSON] eslint: v8.57.1
+[JSON_PRETTIER] prettier: 3.4.1
+[JSX] eslint: v8.57.1
+[JSX_PRETTIER] prettier: 3.4.1
+[JUPYTER_NBQA_BLACK] nbqa: Version command not supported
+[JUPYTER_NBQA_FLAKE8] nbqa: Version command not supported
+[JUPYTER_NBQA_ISORT] nbqa: Version command not supported
+[JUPYTER_NBQA_MYPY] nbqa: Version command not supported
+[JUPYTER_NBQA_PYLINT] nbqa: Version command not supported
+[JUPYTER_NBQA_RUFF] nbqa: Version command not supported
+[KOTLIN] ktlint: 1.4.1
+[KUBERNETES_KUBECONFORM] kubeconform: v0.6.7
+[LATEX] chktex: v1.7.9
+[LUA] lua: 5.4.6
+[MARKDOWN] markdownlint: 0.42.0
+[MARKDOWN_PRETTIER] prettier: 3.4.1
+[NATURAL_LANGUAGE] textlint: v14.3.0
+[OPENAPI] spectral: 6.14.2
+[PERL] perl: (v5.38.2)
+[PHP_BUILTIN] php: 8.3.13
+[PHP_PHPCS] phpcs: 3.11.2
+[PHP_PHPSTAN] phpstan: 2.0.3
+[PHP_PSALM] psalm: 5.26.1@d747f6500b38ac4f7dfc5edbcae6e4b637d7add0
+[POWERSHELL] pwsh: 7.4.6
+[PROTOBUF] protolint: 0.50.5(6cc254e)
+[PYTHON_BLACK] black: 24.10.0
+[PYTHON_FLAKE8] flake8: 7.1.1
+[PYTHON_ISORT] isort: 5.13.2
+[PYTHON_MYPY] mypy: 1.13.0
+[PYTHON_PYINK] pyink: 24.10.0
+[PYTHON_PYLINT] pylint: 3.3.1
+[PYTHON_RUFF] ruff: 0.7.3
+[RAKU] raku: v2024.04
+[RENOVATE] renovate-config-validator: 39.58.1
+[RUBY] rubocop: 1.68.0
+[RUST_2015] rustfmt: 1.7.0-stable
+[RUST_2018] rustfmt: 1.7.0-stable
+[RUST_2021] rustfmt: 1.7.0-stable
+[RUST_CLIPPY] clippy: 0.1.78
+[R] R: 4.4.0
+[SCALAFMT] scalafmt: 3.8.3
+[SHELL_SHFMT] shfmt: v3.10.0
+[SNAKEMAKE_LINT] snakemake: 8.25.3
+[SNAKEMAKE_SNAKEFMT] snakefmt: 0.10.2
+[SQLFLUFF] sqlfluff: 3.2.5
+[STATES] asl-validator: 3.9.0
+[TEKTON] tekton-lint: 1.1.0
+[TERRAFORM_FMT] terraform: v1.9.8
+[TERRAFORM_TERRASCAN] terrascan: v1.19.9
+[TERRAFORM_TFLINT] tflint: 0.54.0
+[TERRAGRUNT] terragrunt: version
+[TSX] eslint: v8.57.1
+[TYPESCRIPT_ES] eslint: v8.57.1
+[TYPESCRIPT_PRETTIER] prettier: 3.4.1
+[TYPESCRIPT_STANDARD] ts-standard: 12.0.2
+[VUE_PRETTIER] prettier: 3.4.1
+[XML] xmllint: 21207
+[YAML] yamllint: 1.35.1
+[YAML_PRETTIER] prettier: 3.4.1
+2025-01-29 17:32:23 [INFO]   --------------------------------------------
+2025-01-29 17:32:23 [INFO]   Gathering GitHub information...
+2025-01-29 17:32:23 [INFO]   RUN_LOCAL has been set to: true. Bypassing GitHub Actions variables...
+2025-01-29 17:32:23 [INFO]   Successfully validated GITHUB_WORKSPACE: /tmp/lint
+2025-01-29 17:32:23 [INFO]   The default branch for this repository is set to: main
+2025-01-29 17:32:24 [INFO]   --------------------------------------------
+2025-01-29 17:32:24 [INFO]   Validating the configuration
+.git
+d9a3673b82051642a280b00af9ffb3faa0449084
+2025-01-29 17:32:27 [WARN]   Git commit message validation with commitlint is enabled, but no commitlint configuration file is available. Disabling commitlint. To suppress this message, either disable Git commit validation by setting VALIDATE_GIT_COMMITLINT to false in your Super-linter configuration, or provide a commitlint configuration file.
+2025-01-29 17:32:35 [INFO]   Building the list of files and directories to check
+2025-01-29 17:32:37 [INFO]   Successfully gathered list of files...
+2025-01-29 17:33:21 [INFO]   Command output when running linters:
+------
+2025-01-29 17:32:37 [INFO]   Linting CHECKOV items...
+2025-01-29 17:32:58 [ERROR]   Found errors when linting CHECKOV. Exit code: 1.
+2025-01-29 17:32:58 [INFO]   Command output for CHECKOV:
+------
+github_actions scan results:
+
+Passed checks: 14, Failed checks: 1, Skipped checks: 0
+
+Check: CKV2_GHA_1: "Ensure top-level permissions are not set to write-all"
+	FAILED for resource: on(github-actions-sample-main.yml)
+	File: /.github/workflows/github-actions-sample-main.yml:0-1
+------
+2025-01-29 17:32:59 [INFO]   Stderr contents for CHECKOV:
+------
+2025-01-29 17:32:47,983 [MainThread  ] [WARNI]  [ArmLocalGraph] created 0 vertices
+2025-01-29 17:32:47,983 [MainThread  ] [WARNI]  [ArmLocalGraph] created 0 edges
+------
+2025-01-29 17:32:37 [INFO]   Linting CSHARP items...
+2025-01-29 17:32:43 [NOTICE]   CSHARP linted successfully
+2025-01-29 17:32:38 [INFO]   Linting CSS items...
+2025-01-29 17:32:41 [ERROR]   Found errors when linting CSS. Exit code: 1.
+2025-01-29 17:32:41 [INFO]   Stderr contents for CSS:
+------
+
+src/GitHubActionsWeb/src/index.css
+  6:10  ✖  Expected modern color-function notation  color-function-notation
+  6:29  ✖  Expected "0.87" to be "87%"              alpha-value-notation
+
+✖ 2 problems (2 errors, 0 warnings)
+  2 errors potentially fixable with the "--fix" option.
+------
+2025-01-29 17:32:38 [INFO]   Linting CSS_PRETTIER items...
+2025-01-29 17:32:39 [NOTICE]   CSS_PRETTIER linted successfully
+2025-01-29 17:32:40 [INFO]   Command output for CSS_PRETTIER:
+------
+Checking formatting...
+All matched files use Prettier code style!
+------
+2025-01-29 17:32:41 [INFO]   Linting DOTNET_SLN_FORMAT_ANALYZERS items...
+2025-01-29 17:33:15 [NOTICE]   DOTNET_SLN_FORMAT_ANALYZERS linted successfully
+2025-01-29 17:33:15 [INFO]   Stderr contents for DOTNET_SLN_FORMAT_ANALYZERS:
+------
+Warnings were encountered while loading the workspace. Set the verbosity option to the 'diagnostic' level to log warnings.
+------
+2025-01-29 17:32:42 [INFO]   Linting DOTNET_SLN_FORMAT_STYLE items...
+2025-01-29 17:33:13 [NOTICE]   DOTNET_SLN_FORMAT_STYLE linted successfully
+2025-01-29 17:33:13 [INFO]   Stderr contents for DOTNET_SLN_FORMAT_STYLE:
+------
+Warnings were encountered while loading the workspace. Set the verbosity option to the 'diagnostic' level to log warnings.
+------
+2025-01-29 17:32:43 [INFO]   Linting DOTNET_SLN_FORMAT_WHITESPACE items...
+2025-01-29 17:32:59 [NOTICE]   DOTNET_SLN_FORMAT_WHITESPACE linted successfully
+2025-01-29 17:32:59 [INFO]   Stderr contents for DOTNET_SLN_FORMAT_WHITESPACE:
+------
+Warnings were encountered while loading the workspace. Set the verbosity option to the 'diagnostic' level to log warnings.
+------
+2025-01-29 17:32:59 [INFO]   Linting GITHUB_ACTIONS items...
+2025-01-29 17:32:59 [ERROR]   Found errors when linting GITHUB_ACTIONS. Exit code: 1.
+2025-01-29 17:32:59 [INFO]   Command output for GITHUB_ACTIONS:
+------
+.github/workflows/github-actions-sample-main.yml:12:15: the runner of "actions/checkout@v2" action is too old to run on GitHub Actions. update the action's version to fix this issue [action]
+   |
+12 |         uses: actions/checkout@v2
+   |               ^~~~~~~~~~~~~~~~~~~
+------
+2025-01-29 17:32:59 [INFO]   Linting GITLEAKS items...
+2025-01-29 17:33:01 [NOTICE]   GITLEAKS linted successfully
+2025-01-29 17:33:01 [INFO]   Stderr contents for GITLEAKS:
+------
+[90m5:33PM[0m [32mINF[0m scan completed in 13.3ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 42.7ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 17.5ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 30.8ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 19.9ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 16.9ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 36.1ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 30.7ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 16.7ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 13.5ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 54.1ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 44.7ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 37.9ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 12.1ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 44.4ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 17ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 42.8ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 20.1ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 27.2ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 9.26ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 38.7ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 11.4ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 12.1ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 14.9ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 11.2ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 13.8ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 26.7ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 9.79ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+[90m5:33PM[0m [32mINF[0m scan completed in 8.23ms
+[90m5:33PM[0m [32mINF[0m no leaks found
+------
+2025-01-29 17:33:00 [INFO]   Linting GIT_MERGE_CONFLICT_MARKERS items...
+2025-01-29 17:33:02 [NOTICE]   GIT_MERGE_CONFLICT_MARKERS linted successfully
+2025-01-29 17:33:02 [INFO]   Command output for GIT_MERGE_CONFLICT_MARKERS:
+------
+No merge conflicts found in /tmp/lint/.github/workflows/github-actions-sample-main.yml /tmp/lint/src/GitHubActionsWeb/eslint.config.js /tmp/lint/src/GitHubActionsWeb/src/main.jsx /tmp/lint/src/GitHubActionsWeb/index.html /tmp/lint/src/GitHubActionsWeb/vite.config.js /tmp/lint/src/GitHubActionsWeb/nuget.config /tmp/lint/src/GitHubActionsWebApi/Controllers/WeatherForecastController.cs /tmp/lint/.gitignore /tmp/lint/src/GitHubActionsWeb/package-lock.json /tmp/lint/src/GitHubActionsWebApi/GitHubActionsWebApi.csproj /tmp/lint/.vscode/launch.json /tmp/lint/src/GitHubActionsWebApi/Program.cs /tmp/lint/src/GitHubActionsWebApi/Properties/launchSettings.json /tmp/lint/.vscode/tasks.json /tmp/lint/src/GitHubActionsWeb/package.json /tmp/lint/LICENSE /tmp/lint/src/GitHubActionsWebApi/WeatherForecast.cs /tmp/lint/src/GitHubActionsWeb/public/vite.svg /tmp/lint/src/GitHubActionsWebApi/appsettings.Development.json /tmp/lint/README.md /tmp/lint/src/GitHubActionsWeb/src/App.css /tmp/lint/src/GitHubActionsWebApi/appsettings.json /tmp/lint/src/GitHubActionsSample.sln /tmp/lint/src/GitHubActionsWeb/src/App.jsx /tmp/lint/src/GitHubActionsWeb/src/assets/react.svg /tmp/lint/src/GitHubActionsWeb/.gitignore /tmp/lint/src/GitHubActionsWeb/src/index.css /tmp/lint/src/GitHubActionsWeb/GitHubActionsWeb.esproj /tmp/lint/src/GitHubActionsWeb/README.md
+------
+2025-01-29 17:33:02 [INFO]   Linting HTML items...
+2025-01-29 17:33:03 [NOTICE]   HTML linted successfully
+2025-01-29 17:33:03 [INFO]   Command output for HTML:
+------
+
+   Config loaded: /action/lib/.automation/.htmlhintrc
+
+Scanned 1 files, no errors found (59 ms).
+------
+2025-01-29 17:33:03 [INFO]   Stderr contents for HTML:
+------
+(node:8744) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+------
+2025-01-29 17:33:02 [INFO]   Linting HTML_PRETTIER items...
+2025-01-29 17:33:03 [NOTICE]   HTML_PRETTIER linted successfully
+2025-01-29 17:33:03 [INFO]   Command output for HTML_PRETTIER:
+------
+Checking formatting...
+All matched files use Prettier code style!
+------
+2025-01-29 17:33:03 [INFO]   Linting JAVASCRIPT_ES items...
+2025-01-29 17:33:09 [NOTICE]   JAVASCRIPT_ES linted successfully
+2025-01-29 17:33:03 [INFO]   Linting JAVASCRIPT_PRETTIER items...
+2025-01-29 17:33:06 [ERROR]   Found errors when linting JAVASCRIPT_PRETTIER. Exit code: 1.
+2025-01-29 17:33:06 [INFO]   Command output for JAVASCRIPT_PRETTIER:
+------
+Checking formatting...
+------
+2025-01-29 17:33:06 [INFO]   Stderr contents for JAVASCRIPT_PRETTIER:
+------
+[warn] src/GitHubActionsWeb/eslint.config.js
+[warn] src/GitHubActionsWeb/vite.config.js
+[warn] Code style issues found in 2 files. Run Prettier with --write to fix.
+------
+2025-01-29 17:33:06 [INFO]   Linting JAVASCRIPT_STANDARD items...
+2025-01-29 17:33:10 [ERROR]   Found errors when linting JAVASCRIPT_STANDARD. Exit code: 1.
+2025-01-29 17:33:10 [INFO]   Command output for JAVASCRIPT_STANDARD:
+------
+  /tmp/lint/src/GitHubActionsWeb/eslint.config.js:8:4: Trailing spaces not allowed. (no-trailing-spaces)
+  /tmp/lint/src/GitHubActionsWeb/eslint.config.js:9:13: Trailing spaces not allowed. (no-trailing-spaces)
+------
+2025-01-29 17:33:10 [INFO]   Stderr contents for JAVASCRIPT_STANDARD:
+------
+standard: Use JavaScript Standard Style (https://standardjs.com)
+standard: Run `standard --fix` to automatically fix some problems.
+------
+2025-01-29 17:33:09 [INFO]   Linting JSCPD items...
+2025-01-29 17:33:13 [ERROR]   Found errors when linting JSCPD. Exit code: 1.
+2025-01-29 17:33:13 [INFO]   Command output for JSCPD:
+------
+Clone found (json):
+ - /tmp/lint/src/GitHubActionsWebApi/obj/GitHubActionsWebApi.csproj.nuget.dgspec.json [7:63 - 93:2] (86 lines, 448 tokens)
+   /tmp/lint/src/GitHubActionsWebApi/obj/project.assets.json [474:10 - 560:2]
+
+Clone found (markup):
+ - /tmp/lint/src/GitHubActionsWeb/index.html [1:1 - 8:3] (7 lines, 85 tokens)
+   /tmp/lint/src/GitHubActionsWeb/dist/index.html [1:1 - 8:2]
+
+Clone found (json):
+ - /tmp/lint/src/GitHubActionsWebApi/obj/GitHubActionsWebApi.csproj.nuget.dgspec.json [7:63 - 93:2] (86 lines, 448 tokens)
+   /tmp/lint/src/GitHubActionsWebApi/obj/project.assets.json [474:10 - 560:2]
+
+ 7  │ 474 │ : {                                                                                                 
+ 8  │ 475 │       "version": "1.0.0",                                                                           
+ 9  │ 476 │       "restore": {                                                                                  
+ 10 │ 477 │         "projectUniqueName": "/tmp/lint/src/GitHubActionsWebApi/GitHubActionsWebApi.csproj",        
+ 11 │ 478 │         "projectName": "GitHubActionsWebApi",                                                       
+ 12 │ 479 │         "projectPath": "/tmp/lint/src/GitHubActionsWebApi/GitHubActionsWebApi.csproj",              
+ 13 │ 480 │         "packagesPath": "/github/home/.nuget/packages/",                                            
+ 14 │ 481 │         "outputPath": "/tmp/lint/src/GitHubActionsWebApi/obj/",                                     
+ 15 │ 482 │         "projectStyle": "PackageReference",                                                         
+ 16 │ 483 │         "configFilePaths": [                                                                        
+ 17 │ 484 │           "/github/home/.nuget/NuGet/NuGet.Config"                                                  
+ 18 │ 485 │         ],                                                                                          
+ 19 │ 486 │         "originalTargetFrameworks": [                                                               
+ 20 │ 487 │           "net7.0"                                                                                  
+ 21 │ 488 │         ],                                                                                          
+ 22 │ 489 │         "sources": {                                                                                
+ 23 │ 490 │           "https://api.nuget.org/v3/index.json": {}                                                 
+ 24 │ 491 │         },                                                                                          
+ 25 │ 492 │         "frameworks": {                                                                             
+ 26 │ 493 │           "net7.0": {                                                                               
+ 27 │ 494 │             "targetAlias": "net7.0",                                                                
+ 28 │ 495 │             "projectReferences": {}                                                                 
+ 29 │ 496 │           }                                                                                         
+ 30 │ 497 │         },                                                                                          
+ 31 │ 498 │         "warningProperties": {                                                                      
+ 32 │ 499 │           "warnAsError": [                                                                          
+ 33 │ 500 │             "NU1605"                                                                                
+ 34 │ 501 │           ]                                                                                         
+ 35 │ 502 │         },                                                                                          
+ 36 │ 503 │         "restoreAuditProperties": {                                                                 
+ 37 │ 504 │           "enableAudit": "true",                                                                    
+ 38 │ 505 │           "auditLevel": "low",                                                                      
+ 39 │ 506 │           "auditMode": "all"                                                                        
+ 40 │ 507 │         },                                                                                          
+ 41 │ 508 │         "SdkAnalysisLevel": "9.0.100"                                                               
+ 42 │ 509 │       },                                                                                            
+ 43 │ 510 │       "frameworks": {                                                                               
+ 44 │ 511 │         "net7.0": {                                                                                 
+ 45 │ 512 │           "targetAlias": "net7.0",                                                                  
+ 46 │ 513 │           "dependencies": {                                                                         
+ 47 │ 514 │             "Microsoft.AspNetCore.OpenApi": {                                                       
+ 48 │ 515 │               "target": "Package",                                                                  
+ 49 │ 516 │               "version": "[7.0.10, )"                                                               
+ 50 │ 517 │             },                                                                                      
+ 51 │ 518 │             "Swashbuckle.AspNetCore": {                                                             
+ 52 │ 519 │               "target": "Package",                                                                  
+ 53 │ 520 │               "version": "[6.5.0, )"                                                                
+ 54 │ 521 │             }                                                                                       
+ 55 │ 522 │           },                                                                                        
+ 56 │ 523 │           "imports": [                                                                              
+ 57 │ 524 │             "net461",                                                                               
+ 58 │ 525 │             "net462",                                                                               
+ 59 │ 526 │             "net47",                                                                                
+ 60 │ 527 │             "net471",                                                                               
+ 61 │ 528 │             "net472",                                                                               
+ 62 │ 529 │             "net48",                                                                                
+ 63 │ 530 │             "net481"                                                                                
+ 64 │ 531 │           ],                                                                                        
+ 65 │ 532 │           "assetTargetFallback": true,                                                              
+ 66 │ 533 │           "warn": true,                                                                             
+ 67 │ 534 │           "downloadDependencies": [                                                                 
+ 68 │ 535 │             {                                                                                       
+ 69 │ 536 │               "name": "Microsoft.AspNetCore.App.Ref",                                               
+ 70 │ 537 │               "version": "[7.0.20, 7.0.20]"                                                         
+ 71 │ 538 │             },                                                                                      
+ 72 │ 539 │             {                                                                                       
+ 73 │ 540 │               "name": "Microsoft.NETCore.App.Host.linux-musl-x64",                                  
+ 74 │ 541 │               "version": "[7.0.20, 7.0.20]"                                                         
+ 75 │ 542 │             },                                                                                      
+ 76 │ 543 │             {                                                                                       
+ 77 │ 544 │               "name": "Microsoft.NETCore.App.Ref",                                                  
+ 78 │ 545 │               "version": "[7.0.20, 7.0.20]"                                                         
+ 79 │ 546 │             }                                                                                       
+ 80 │ 547 │           ],                                                                                        
+ 81 │ 548 │           "frameworkReferences": {                                                                  
+ 82 │ 549 │             "Microsoft.AspNetCore.App": {                                                           
+ 83 │ 550 │               "privateAssets": "none"                                                               
+ 84 │ 551 │             },                                                                                      
+ 85 │ 552 │             "Microsoft.NETCore.App": {                                                              
+ 86 │ 553 │               "privateAssets": "all"                                                                
+ 87 │ 554 │             }                                                                                       
+ 88 │ 555 │           },                                                                                        
+ 89 │ 556 │           "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.100/RuntimeIdentifierGraph.json" 
+ 90 │ 557 │         }                                                                                           
+ 91 │ 558 │       }                                                                                             
+ 92 │ 559 │     }                                                                                               
+ 93 │ 560 │   }                                                                                                 
+
+Clone found (markup):
+ - /tmp/lint/src/GitHubActionsWeb/index.html [1:1 - 8:3] (7 lines, 85 tokens)
+   /tmp/lint/src/GitHubActionsWeb/dist/index.html [1:1 - 8:2]
+
+ 1 │ 1 │ <!doctype html>                                                              
+ 2 │ 2 │ <html lang="en">                                                             
+ 3 │ 3 │   <head>                                                                     
+ 4 │ 4 │     <meta charset="UTF-8" />                                                 
+ 5 │ 5 │     <link rel="icon" type="image/svg+xml" href="/vite.svg" />                
+ 6 │ 6 │     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+ 7 │ 7 │     <title>Vite + React</title>                                              
+ 8 │ 8 │   </                                                                         
+
+Found 2 clones.
+Error: ERROR: jscpd found too many duplicates (6.87%) over threshold (0%)
+    at ThresholdReporter.report (/node_modules/@jscpd/finder/dist/index.js:612:13)
+    at /node_modules/@jscpd/finder/dist/index.js:110:18
+    at Array.forEach (<anonymous>)
+    at /node_modules/@jscpd/finder/dist/index.js:109:22
+    at async /node_modules/jscpd/dist/jscpd.js:351:5
+------
+2025-01-29 17:33:13 [INFO]   Stderr contents for JSCPD:
+------
+ERROR: jscpd found too many duplicates (6.87%) over threshold (0%)
+------
+2025-01-29 17:33:10 [INFO]   Linting JSON items...
+2025-01-29 17:33:17 [ERROR]   Found errors when linting JSON. Exit code: 1.
+2025-01-29 17:33:17 [INFO]   Command output for JSON:
+------
+
+/tmp/lint/.vscode/launch.json
+  5:13  error  Parsing error: Unexpected comment
+
+✖ 1 problem (1 error, 0 warnings)
+------
+2025-01-29 17:33:13 [INFO]   Linting JSON_PRETTIER items...
+2025-01-29 17:33:15 [ERROR]   Found errors when linting JSON_PRETTIER. Exit code: 1.
+2025-01-29 17:33:15 [INFO]   Command output for JSON_PRETTIER:
+------
+Checking formatting...
+------
+2025-01-29 17:33:15 [INFO]   Stderr contents for JSON_PRETTIER:
+------
+[warn] .vscode/launch.json
+[warn] .vscode/tasks.json
+[warn] src/GitHubActionsWebApi/Properties/launchSettings.json
+[warn] src/GitHubActionsWebApi/appsettings.Development.json
+[warn] src/GitHubActionsWebApi/appsettings.json
+[warn] Code style issues found in 5 files. Run Prettier with --write to fix.
+------
+2025-01-29 17:33:14 [INFO]   Linting JSX items...
+2025-01-29 17:33:19 [NOTICE]   JSX linted successfully
+2025-01-29 17:33:15 [INFO]   Linting JSX_PRETTIER items...
+2025-01-29 17:33:17 [ERROR]   Found errors when linting JSX_PRETTIER. Exit code: 1.
+2025-01-29 17:33:17 [INFO]   Command output for JSX_PRETTIER:
+------
+Checking formatting...
+------
+2025-01-29 17:33:17 [INFO]   Stderr contents for JSX_PRETTIER:
+------
+[warn] src/GitHubActionsWeb/src/main.jsx
+[warn] src/GitHubActionsWeb/src/App.jsx
+[warn] Code style issues found in 2 files. Run Prettier with --write to fix.
+------
+2025-01-29 17:33:17 [INFO]   Linting MARKDOWN items...
+2025-01-29 17:33:18 [ERROR]   Found errors when linting MARKDOWN. Exit code: 1.
+2025-01-29 17:33:18 [INFO]   Stderr contents for MARKDOWN:
+------
+/tmp/lint/README.md:5 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Install Super Linter Locally"]
+------
+2025-01-29 17:33:17 [INFO]   Linting MARKDOWN_PRETTIER items...
+2025-01-29 17:33:18 [ERROR]   Found errors when linting MARKDOWN_PRETTIER. Exit code: 1.
+2025-01-29 17:33:18 [INFO]   Command output for MARKDOWN_PRETTIER:
+------
+Checking formatting...
+------
+2025-01-29 17:33:18 [INFO]   Stderr contents for MARKDOWN_PRETTIER:
+------
+[warn] README.md
+[warn] Code style issues found in the above file. Run Prettier with --write to fix.
+------
+2025-01-29 17:33:17 [INFO]   Linting NATURAL_LANGUAGE items...
+2025-01-29 17:33:19 [NOTICE]   NATURAL_LANGUAGE linted successfully
+2025-01-29 17:33:19 [INFO]   Linting YAML items...
+2025-01-29 17:33:20 [ERROR]   Found errors when linting YAML. Exit code: 1.
+2025-01-29 17:33:20 [INFO]   Command output for YAML:
+------
+/tmp/lint/.github/workflows/github-actions-sample-main.yml:1:4: [error] wrong new line character: expected 
+ (new-lines)
+------
+2025-01-29 17:33:19 [INFO]   Linting YAML_PRETTIER items...
+2025-01-29 17:33:20 [ERROR]   Found errors when linting YAML_PRETTIER. Exit code: 1.
+2025-01-29 17:33:20 [INFO]   Command output for YAML_PRETTIER:
+------
+Checking formatting...
+------
+2025-01-29 17:33:20 [INFO]   Stderr contents for YAML_PRETTIER:
+------
+[warn] .github/workflows/github-actions-sample-main.yml
+[warn] Code style issues found in the above file. Run Prettier with --write to fix.
+------
+------
+2025-01-29 17:33:21 [INFO]   ----------------------------------------------
+2025-01-29 17:33:21 [INFO]   ----------------------------------------------
+2025-01-29 17:33:21 [ERROR]   Errors found in CHECKOV
+2025-01-29 17:33:21 [NOTICE]   Successfully linted CSHARP
+2025-01-29 17:33:21 [ERROR]   Errors found in CSS
+2025-01-29 17:33:21 [NOTICE]   Successfully linted CSS_PRETTIER
+2025-01-29 17:33:21 [NOTICE]   Successfully linted DOTNET_SLN_FORMAT_ANALYZERS
+2025-01-29 17:33:21 [NOTICE]   Successfully linted DOTNET_SLN_FORMAT_STYLE
+2025-01-29 17:33:21 [NOTICE]   Successfully linted DOTNET_SLN_FORMAT_WHITESPACE
+2025-01-29 17:33:21 [ERROR]   Errors found in GITHUB_ACTIONS
+2025-01-29 17:33:21 [NOTICE]   Successfully linted GITLEAKS
+2025-01-29 17:33:21 [NOTICE]   Successfully linted GIT_MERGE_CONFLICT_MARKERS
+2025-01-29 17:33:21 [NOTICE]   Successfully linted HTML
+2025-01-29 17:33:21 [NOTICE]   Successfully linted HTML_PRETTIER
+2025-01-29 17:33:21 [NOTICE]   Successfully linted JAVASCRIPT_ES
+2025-01-29 17:33:21 [ERROR]   Errors found in JAVASCRIPT_PRETTIER
+2025-01-29 17:33:21 [ERROR]   Errors found in JAVASCRIPT_STANDARD
+2025-01-29 17:33:21 [ERROR]   Errors found in JSCPD
+2025-01-29 17:33:21 [ERROR]   Errors found in JSON
+2025-01-29 17:33:21 [ERROR]   Errors found in JSON_PRETTIER
+2025-01-29 17:33:21 [NOTICE]   Successfully linted JSX
+2025-01-29 17:33:21 [ERROR]   Errors found in JSX_PRETTIER
+2025-01-29 17:33:21 [ERROR]   Errors found in MARKDOWN
+2025-01-29 17:33:21 [ERROR]   Errors found in MARKDOWN_PRETTIER
+2025-01-29 17:33:21 [NOTICE]   Successfully linted NATURAL_LANGUAGE
+2025-01-29 17:33:22 [ERROR]   Errors found in YAML
+2025-01-29 17:33:22 [ERROR]   Errors found in YAML_PRETTIER
+2025-01-29 17:33:22 [ERROR]   Super-linter detected linting errors
