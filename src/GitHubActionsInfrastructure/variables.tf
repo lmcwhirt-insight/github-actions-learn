@@ -4,28 +4,28 @@
 # }
 
 variable "subscriptionId" {
-    type = string
-    default = "e669defe-f19a-4012-8e5b-6ac0529e0639" 
+  type    = string
+  default = "e669defe-f19a-4012-8e5b-6ac0529e0639"
 }
 
 variable "project_name" {
-    type = string
-    default = "ghal"
+  type    = string
+  default = "ghal"
 }
 
 variable "env" {
-    type = string
-    default = "dev"
+  type    = string
+  default = "dev"
 }
 
 variable "should_create_rg" {
-    type = bool
-    default = true
+  type    = bool
+  default = true
 }
 
 variable "rg_location" {
-    type=string
-    default="westus2"
+  type    = string
+  default = "westus2"
 }
 
 # variable "rg_name" {
