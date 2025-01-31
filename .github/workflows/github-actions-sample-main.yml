@@ -19,7 +19,7 @@ jobs:
         env: 
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.PAT_GITHUB_TOKEN }}
-          VALIDATE_JAVASCRIPT_PRETTIER: true
+          # VALIDATE_JAVASCRIPT_PRETTIER: true
           FIX_JAVASCRIPT_PRETTIER: true
 
   build-job:
