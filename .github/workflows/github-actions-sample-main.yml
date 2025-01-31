@@ -5,22 +5,51 @@ name: github-actions-sample-main.yml
 on: push
 
 jobs:
-  lint-job:
-    name: Lint code
+  ## Super-Linter is a pain in the workflow!
+  # lint-job:
+  #   name: Lint code
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     contents: write
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v4
+
+  #     - name: Run linter
+  #       uses: github/super-linter@v7
+  #       env: 
+  #         DEFAULT_BRANCH: main
+  #         GITHUB_TOKEN: ${{ secrets.PAT_GITHUB_TOKEN }}
+  #         # VALIDATE_JAVASCRIPT_PRETTIER: true
+  #         FIX_JAVASCRIPT_PRETTIER: true
+  
+  terraform:
+    name: "Terraform CDK Diff"
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Run linter
-        uses: github/super-linter@v7
-        env: 
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.PAT_GITHUB_TOKEN }}
-          # VALIDATE_JAVASCRIPT_PRETTIER: true
-          FIX_JAVASCRIPT_PRETTIER: true
+      - name: Setup NOdeJS
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.10.4
+
+      - name: Terrformminit
+        run: terraform init
+
+      - name: Terrform plan
+        id: plan
+        run: terraform plan -no-color
+      
+      - run: echo ${{ steps.plan.outputs.stdout }}
+      - run: echo ${{ steps.plan.outputs.stderr }}
+      - run: echo ${{ steps.plan.outputs.exitcode }}
 
   build-job:
     name: Build web API
