@@ -1,6 +1,9 @@
 # github-actions-learn
 A repository to learn and test GH Actions
 
+## Bagde Satus
+
+    [![Super-Linter](https://github.com/lmcwhirt-insight/github-actions-learn/actions/workflows/.github/workflows/github-actions-sample-main.yml/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
 ## Install Super Linter Locally
 
