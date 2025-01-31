@@ -26,7 +26,7 @@ jobs:
         working-directory: ./src/GitHubActionsWebApi
     strategy:
       matrix:
-        dotnet-version: [ '8.0.x' ]
+        dotnet-version: ['8.0.x']
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -58,7 +58,12 @@ jobs:
         run: dotnet restore
 
       - name: Build
-        run: dotnet build --no-restore --configuration Release /p:Version=${{ format('{0}.{1}.{2}', steps.gitversion.outputs.major, steps.gitversion.outputs.minor, steps.gitversion.outputs.buildMetaData) }} 
+        run: dotnet build --no-restore --configuration Release /p:Version=${{ env.version }}
+        env:
+          major: steps.gitversion.outputs.major
+          minor: steps.gitversion.outputs.minor
+          build: steps.gitversion.outputs.buildMetaData
+          version: ${{ format('{0}.{1}.{2}', env.major, env.minor, env.build) }}
 
       - name: Test with the dotnet CLI
         run: dotnet test --no-restore --results-directory "TestResults-${{ matrix.dotnet-version }}"
@@ -72,7 +77,12 @@ jobs:
         if: ${{ always() }}      
 
       - name: Dotnet package
-        run: dotnet pack --no-restore --configuration Release /p:PackageVersion=${{ format('{0}.{1}.{2}', steps.gitversion.outputs.major, steps.gitversion.outputs.minor, steps.gitversion.outputs.buildMetaData) }}
+        run: dotnet pack --no-restore --configuration Release /p:PackageVersion=${{ env.version }}
+        env:
+          major: steps.gitversion.outputs.major
+          minor: steps.gitversion.outputs.minor
+          build: steps.gitversion.outputs.buildMetaData
+          version: ${{ format('{0}.{1}.{2}', env.major, env.minor, env.build) }}
         
       - name: Dotnet publish
         run: dotnet nuget push ./bin/Release/*.nupkg --skip-duplicate
