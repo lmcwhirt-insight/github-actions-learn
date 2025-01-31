@@ -19,8 +19,6 @@ jobs:
         env: 
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.PAT_GITHUB_TOKEN }}
-          # TERRAFORM_TERRASCAN_CONFIG_FILE: .github/linters/terrascan.yml
-          # YAML_CONFIG_FILE: .github/linters/yaml-lint.yml
 
   build-job:
     name: Build web API
