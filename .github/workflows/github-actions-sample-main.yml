@@ -107,7 +107,7 @@ jobs:
         run: dotnet build --no-restore --configuration Release /p:Version=${{ format('{0}.{1}.{2}', steps.gitversion.outputs.major, steps.gitversion.outputs.minor, steps.gitversion.outputs.buildMetaData) }}
 
       - name: Test with the dotnet CLI
-        run: dotnet test --no-restore --results-directory "TestResults-${{ matrix.dotnet-version }}" ../GitHubActionsWebApiTests/GitHubActionsWebApiTests.csproj
+        run: dotnet test --no-restore --results-directory "TestResults-${{ matrix.dotnet-version }}" ../GitHubActionsWebApiTest/GitHubActionsWebApiTest.csproj
 
       - name: Upload dotnet test results
         uses: actions/upload-artifact@v4
