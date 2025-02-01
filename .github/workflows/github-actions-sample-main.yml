@@ -24,7 +24,7 @@ jobs:
   #         FIX_JAVASCRIPT_PRETTIER: true
   
   terraform:
-    name: "Terraform CDK Diff"
+    name: "Terraform build/deploy"
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -124,7 +124,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: dotnet-build-artifact
-          path: ./publish/
+          path: publish
 
       - name: Dir
         run: ls -la ./publish
