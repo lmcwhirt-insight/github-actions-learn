@@ -108,6 +108,7 @@ jobs:
 
       - name: Test with the dotnet CLI
         run: dotnet test --no-restore --results-directory "TestResults-${{ matrix.dotnet-version }}"
+        working-directory: ./src
 
       - name: Upload dotnet test results
         uses: actions/upload-artifact@v4
@@ -116,6 +117,15 @@ jobs:
           path: TestResults-${{ matrix.dotnet-version }}
         # Use always() to always run this step to publish test results when there are test failures
         if: ${{ always() }}      
+
+      - name: Publish the project
+        run: dotnet publish -c Release -o ./publish
+  
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dotnet-build-artifact
+          path: ./publish
 
       - name: Dotnet package
         run: dotnet pack --no-restore --configuration Release /p:PackageVersion=${{ format('{0}.{1}.{2}', steps.gitversion.outputs.major, steps.gitversion.outputs.minor, steps.gitversion.outputs.buildMetaData) }}
