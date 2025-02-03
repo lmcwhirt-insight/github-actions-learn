@@ -114,24 +114,24 @@ jobs:
         run: dotnet build --no-restore --configuration Release /p:Version=${{ format('{0}.{1}.{2}', steps.gitversion.outputs.major, steps.gitversion.outputs.minor, steps.gitversion.outputs.buildMetaData) }}
 
       - name: Test with the dotnet CLI
-        run: dotnet test --no-restore --results-directory "$GITHUB_WORKSPACE/TestResults-${{ matrix.dotnet-version }}" ../GitHubActionsWebApiTest/GitHubActionsWebApiTest.csproj
+        run: dotnet test --no-restore --results-directory $GITHUB_WORKSPACE"/TestResults-${{ matrix.dotnet-version }}" ../GitHubActionsWebApiTest/GitHubActionsWebApiTest.csproj
 
       - name: Upload dotnet test results
         uses: actions/upload-artifact@v4
         with:
           name: dotnet-test-results-${{ matrix.dotnet-version }}
-          path: '$GITHUB_WORKSPACE/TestResults-${{ matrix.dotnet-version }}'
+          path: $GITHUB_WORKSPACE'/TestResults-${{ matrix.dotnet-version }}'
         # Use always() to always run this step to publish test results when there are test failures
         if: ${{ always() }}
 
       - name: Publish the project
-        run: dotnet publish -c Release -o '$GITHUB_WORKSPACE/api-publish'
+        run: dotnet publish -c Release -o $GITHUB_WORKSPACE'/api-publish'
   
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: api-function-package
-          path: '$GITHUB_WORKSPACE/api-publish/'
+          path: $GITHUB_WORKSPACE'/api-publish/'
 
       # - name: Dotnet package
       #   run: dotnet pack --no-restore --configuration Release /p:PackageVersion=${{ format('{0}.{1}.{2}', steps.gitversion.outputs.major, steps.gitversion.outputs.minor, steps.gitversion.outputs.buildMetaData) }}
@@ -152,13 +152,13 @@ jobs:
       #   run: ls -la $GITHUB_WORKSPACE
 
       - name: Zip API files
-        run: zip -v '$GITHUB_WORKSPACE/api-function-package.zip' '$GITHUB_WORKSPACE/api-publish/'
+        run: zip -v $GITHUB_WORKSPACE'/api-function-package.zip' $GITHUB_WORKSPACE'/api-publish/'
 
       - name: 'Deploy function'
         uses: Azure/functions-action@v1
         id: fa
         with:
           app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }} 
-          package: '$GITHUB_WORKSPACE/api-function-package.zip'
+          package: $GITHUB_WORKSPACE'/api-function-package.zip'
           publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
       
