@@ -145,15 +145,12 @@ jobs:
       #   with:
       #     name: api-function-package
       #     path: artifact-download
-
-      # - name: Dir - ls -la .
-      #   run: ls -la .
-
-      # - name: Dir - ls -la $GITHUB_WORKSPACE
-      #   run: ls -la $GITHUB_WORKSPACE
-
+      
       - name: Zip API files
-        run: zip -v '${{ env.API_BASE_PATH }}/api-function-package.zip' '${{ env.API_BASE_PATH }}/api-publish/'
+        run: zip -v '${{ env.API_BASE_PATH }}/api-function-package.zip' '${{ env.API_BASE_PATH }}/api-publish/*'
+
+      - name: Dir - ls -la ${{ env.API_BASE_PATH }}
+        run: ls -la ${{ env.API_BASE_PATH }}
 
       - name: 'Deploy function'
         uses: Azure/functions-action@v1
