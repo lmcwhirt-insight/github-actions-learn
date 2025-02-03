@@ -125,34 +125,25 @@ jobs:
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
-          name: dotnet-build-artifact
+          name: api-function-package
           path: "**/api-publish/"
-
-      - name: Dir
-        run: ls -la /home/runner/work/
-
-      - name: Dir
-        run: ls -la /home/runner/work/_actions/actions
-
-      - name: Dir
-        run: ls -la /home/runner/work/_actions/actions/upload-artifact
-
-      - name: Dir
-        run: ls -la /home/runner/work/_actions/actions/upload-artifact/v4
-
-      - name: Dir
-        run: ls -la /home/runner/work/_actions/actions/upload-artifact/v4.completed
 
       - name: Dotnet package
         run: dotnet pack --no-restore --configuration Release /p:PackageVersion=${{ format('{0}.{1}.{2}', steps.gitversion.outputs.major, steps.gitversion.outputs.minor, steps.gitversion.outputs.buildMetaData) }}
         
       - name: Dotnet publish
         run: dotnet nuget push ./bin/Release/*.nupkg --skip-duplicate
+      
+      # - name: Download Artifact
+      #   uses: actions/download-artifact@v4
+      #   with:
+      #     name: api-function-package
+      #     path: artifact-download
 
       - name: 'Deploy function'
         uses: Azure/functions-action@v1
         id: fa
         with:
           app-name: 'ghal-dev-fa' 
-          package: '${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/output'
+          package: ./api-publish
           publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
