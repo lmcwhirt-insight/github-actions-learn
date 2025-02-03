@@ -73,6 +73,8 @@ jobs:
     strategy:
       matrix:
         dotnet-version: ['8.0.x']
+    env:
+      ACTIONS_STEP_DEBUG: true
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -118,13 +120,13 @@ jobs:
         if: ${{ always() }}
 
       - name: Publish the project
-        run: dotnet publish -c Release -o ./publish
+        run: dotnet publish -c Release -o ./api-publish
   
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: dotnet-build-artifact
-          path: "**/publish/"
+          path: "**/api-publish/"
 
       - name: Dir
         run: ls -la ./publish
@@ -134,3 +136,11 @@ jobs:
         
       - name: Dotnet publish
         run: dotnet nuget push ./bin/Release/*.nupkg --skip-duplicate
+
+      - name: 'Deploy function'
+        uses: Azure/functions-action@v1
+        id: fa
+        with:
+          app-name: 'ghal-dev-fa' 
+          package: '${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/output'
+          publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
