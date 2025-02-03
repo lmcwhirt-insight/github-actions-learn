@@ -77,7 +77,7 @@ jobs:
         working-directory: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/src/GitHubActionsWebApi
     strategy:
       matrix:
-        dotnet-version: [DOTNET_VERSION]
+        dotnet-version: [ ${{ env.DOTNET_VERSION }} ]
     env:
       ACTIONS_STEP_DEBUG: false
     steps:
