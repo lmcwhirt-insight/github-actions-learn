@@ -148,8 +148,8 @@ jobs:
       - name: Dir - ls -la .
         run: ls -la .
 
-      - name: Dir - ls -la ~
-        run: ls -la ~
+      - name: Dir - ls -la ${{ env.GITHUB_WORKSPACE }}
+        run: ls -la ${{ env.GITHUB_WORKSPACE }}
 
       - name: 'Deploy function'
         uses: Azure/functions-action@v1
