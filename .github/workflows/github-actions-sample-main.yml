@@ -105,8 +105,8 @@ jobs:
         id: gitversion
         uses: GitTools/actions/gitversion/execute@v0
 
-      - name: Log gitversion output
-        run: echo "gitversion.output:c ${{ toJSON(steps.gitversion.outputs) }}"
+      # - name: Log gitversion output
+      #   run: echo "gitversion.output:c ${{ toJSON(steps.gitversion.outputs) }}"
 
       - name: Install dependencies
         run: dotnet restore
@@ -157,7 +157,7 @@ jobs:
 
       - name: 'Deploy function'
         uses: Azure/functions-action@v1
-        id: fa
+        id: api-fa
         with:
           app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }} 
           package: '${{ env.API_BASE_PATH }}/api-function-package.zip'
