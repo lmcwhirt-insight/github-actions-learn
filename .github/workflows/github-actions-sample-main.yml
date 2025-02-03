@@ -4,6 +4,11 @@ name: github-actions-sample-main.yml
 # 3456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 
 on: push
 
+env:
+  AZURE_FUNCTIONAPP_NAME: 'ghal-dev-fa'
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: '.'  
+  DOTNET_VERSION: '8.0.x'
+
 jobs:
   ## Super-Linter is a pain in the workflow!
   # lint-job:
@@ -69,10 +74,10 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./src/GitHubActionsWebApi
+        working-directory: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/src/GitHubActionsWebApi
     strategy:
       matrix:
-        dotnet-version: ['8.0.x']
+        dotnet-version: [DOTNET_VERSION]
     env:
       ACTIONS_STEP_DEBUG: false
     steps:
@@ -87,7 +92,7 @@ jobs:
           dotnet-version: ${{ matrix.dotnet-version }}
           source-url: https://nuget.pkg.github.com/lmcwhirt-insight/index.json
         env:
-          NUGET_AUTH_TOKEN: ${{secrets.PAT_GITHUB_TOKEN}}
+          NUGET_AUTH_TOKEN: ${{ secrets.PAT_GITHUB_TOKEN }}
 
       - name: Install GitVersion
         uses: GitTools/actions/gitversion/setup@v0
@@ -115,12 +120,12 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: dotnet-test-results-${{ matrix.dotnet-version }}
-          path: ./TestResults-${{ matrix.dotnet-version }}
+          path: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/TestResults-${{ matrix.dotnet-version }}
         # Use always() to always run this step to publish test results when there are test failures
         if: ${{ always() }}
 
       - name: Publish the project
-        run: dotnet publish -c Release -o ./api-publish
+        run: dotnet publish -c Release -o ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/api-publish
   
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
@@ -144,6 +149,7 @@ jobs:
         uses: Azure/functions-action@v1
         id: fa
         with:
-          app-name: 'ghal-dev-fa' 
-          package: '**/api-publish'
+          app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }} 
+          package: '${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/api-publish/'
           publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
+      
