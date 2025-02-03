@@ -76,8 +76,6 @@ jobs:
     strategy:
       matrix:
         dotnet-version: [ '8.0.x' ]
-    variables:
-      ACTIONS_STEP_DEBUG: false        
     env:
       AZURE_FUNCTIONAPP_NAME: 'ghal-dev-fa'
       AZURE_FUNCTIONAPP_PACKAGE_PATH: '${{ env.WORKFLOW_BASE_PATH }}'
