@@ -145,11 +145,11 @@ jobs:
       #     name: api-function-package
       #     path: artifact-download
 
-      - name: Dir - ls -la .
-        run: ls -la .
+      # - name: Dir - ls -la .
+      #   run: ls -la .
 
-      - name: Dir - ls -la $GITHUB_WORKSPACE
-        run: ls -la $GITHUB_WORKSPACE
+      # - name: Dir - ls -la $GITHUB_WORKSPACE
+      #   run: ls -la $GITHUB_WORKSPACE
 
       - name: 'Deploy function'
         uses: Azure/functions-action@v1
