@@ -78,7 +78,7 @@ jobs:
         dotnet-version: [ '8.0.x' ]
     env:
       AZURE_FUNCTIONAPP_NAME: 'ghal-dev-fa'
-      AZURE_FUNCTIONAPP_PACKAGE_PATH: '${{ env.WORKFLOW_BASE_PATH }}'
+      # AZURE_FUNCTIONAPP_PACKAGE_PATH: '${{ env.WORKFLOW_BASE_PATH }}'
       DOTNET_VERSION: '8.0.x'
 
     steps:
