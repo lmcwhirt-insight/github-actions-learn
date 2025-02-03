@@ -147,7 +147,7 @@ jobs:
       #     path: artifact-download
 
       - name: Dir - ls -la '${{ env.API_BASE_PATH }}/api-publish'
-      run: ls -la '${{ env.API_BASE_PATH }}/api-publish'
+        run: ls -la '${{ env.API_BASE_PATH }}/api-publish'
 
       - name: Zip API files
         run: zip -v '${{ env.API_BASE_PATH }}/api-function-package.zip' '${{ env.API_BASE_PATH }}/api-publish'
