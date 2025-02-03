@@ -145,6 +145,12 @@ jobs:
       #     name: api-function-package
       #     path: artifact-download
 
+      - name: Dir - ls -la .
+        run: ls -la .
+
+      - name: Dir - ls -la ~
+        run: ls -la ~
+
       - name: 'Deploy function'
         uses: Azure/functions-action@v1
         id: fa
