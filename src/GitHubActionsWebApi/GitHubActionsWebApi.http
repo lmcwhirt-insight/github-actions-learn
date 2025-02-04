@@ -1,0 +1,6 @@
+@GitHubActionsWebApi_HostAddress = http://localhost:5273
+
+GET {{GitHubActionsWebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
