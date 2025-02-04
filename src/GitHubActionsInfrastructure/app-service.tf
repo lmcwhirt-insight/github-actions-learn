@@ -37,7 +37,7 @@ resource "azurerm_linux_web_app" "api-web-app" {
 
   
   site_config {
-    always_on = true
+    always_on = false
     default_documents = []
     application_stack {
       dotnet_version = "8.0"
