@@ -24,9 +24,22 @@ resource "azurerm_linux_web_app" "api-web-app" {
   service_plan_id     = azurerm_service_plan.web-app-sp.id
 
   app_settings  = {
-
+    "APPINSIGHTS_INSTRUMENTATIONKEY" = azurerm_application_insights.api-web-ai.instrumentation_key,
+    "APPINSIGHTS_PROFILERFEATURE_VERSION" = "1.0.0",
+    "APPINSIGHTS_SNAPSHOTFEATURE_VERSION" = "1.0.0",
+    "APPLICATIONINSIGHTS_CONNECTION_STRING" = azurerm_application_insights.api-web-ai.connection_string,
+    "APPLICATIONINSIGHTS_ENABLESQLQUERYCOLLECTION" = "disabled",
+    "ApplicationInsightsAgent_EXTENSION_VERSION" = "~3",
+    "DiagnosticServices_EXTENSION_VERSION" = "~3",
+    "DISABLE_APPINSIGHTS_SDK" = "disabled",
+    "IGNORE_APPINSIGHTS_SDK" = "disabled",
+    "InstrumentationEngine_EXTENSION_VERSION" = "disabled",
+    "SnapshotDebugger_EXTENSION_VERSION" = "disabled",
+    "XDT_MicrosoftApplicationInsights_BaseExtensions" = "disabled",
+    "XDT_MicrosoftApplicationInsights_Mode" = "recommended",
+    "XDT_MicrosoftApplicationInsights_PreemptSdk" = "disabled"
   }
-
+  
   https_only = true
   ftp_publish_basic_authentication_enabled = false
 
