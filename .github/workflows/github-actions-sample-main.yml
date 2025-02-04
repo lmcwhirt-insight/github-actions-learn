@@ -29,6 +29,7 @@ jobs:
   terraform:
     name: "Terraform build/deploy"
     runs-on: ubuntu-latest
+    id: terraform
     defaults:
       run:
         working-directory: ./src/GitHubActionsInfrastructure
@@ -70,6 +71,10 @@ jobs:
   build-job:
     name: Build web API
     runs-on: ubuntu-latest
+    if: ${{ jobs.terraform.result == 'success' }}
+    dependencies: 
+      terraform
+
     defaults:
       run:
         working-directory: './src/GitHubActionsWebApi'
