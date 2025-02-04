@@ -1,7 +1,7 @@
-# variable "tenantId" {
-#     type = string
-#     default = "6c637512-c417-4e78-9d62-b61258e4b619" # Insight
-# }
+variable "tenantId" {
+    type = string
+    default = "6c637512-c417-4e78-9d62-b61258e4b619" # Insight
+}
 
 variable "subscriptionId" {
     type = string

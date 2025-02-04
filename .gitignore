@@ -39,6 +39,7 @@ bld/
 # Terraform generated files
 **/.terraform/*
 **/*tfstate*
+**/.terraform*
 
 # Visual Studio 2017 auto generated files
 Generated\ Files/
