@@ -37,7 +37,8 @@ resource "azurerm_linux_web_app" "api-web-app" {
     "SnapshotDebugger_EXTENSION_VERSION" = "disabled",
     "XDT_MicrosoftApplicationInsights_BaseExtensions" = "disabled",
     "XDT_MicrosoftApplicationInsights_Mode" = "recommended",
-    "XDT_MicrosoftApplicationInsights_PreemptSdk" = "disabled"
+    "XDT_MicrosoftApplicationInsights_PreemptSdk" = "disabled",
+    "WEBSITE_WEBDEPLOY_USE_SCM" = "true"
   }
   
   https_only = true
