@@ -1,5 +1,5 @@
 {
     "sdk": {
-        "version": "8.0.405" // Make sure to use the correct .NET 8 version you installed
+        "version": "8.0.405"
     }
 }
